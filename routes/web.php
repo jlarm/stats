@@ -19,6 +19,10 @@ Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
+Route::get('players/{player}', \App\Livewire\Player\Show::class)
+    ->middleware(['auth', 'verified'])
+    ->name('players.show');
+
 Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
