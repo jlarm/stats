@@ -23,6 +23,10 @@ Route::get('players/{player}', \App\Livewire\Player\Show::class)
     ->middleware(['auth', 'verified'])
     ->name('players.show');
 
+Route::get('players/{player}/at-bats/create', \App\Livewire\AtBat\Create::class)
+    ->middleware(['auth', 'verified'])
+    ->name('at-bats.create');
+
 Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
