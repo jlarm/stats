@@ -24,10 +24,17 @@ class OpponentFactory extends Factory
             'Detroit Tigers',
             'Kansas City Royals',
             'Los Angeles Angels',
+            'Minnesota Twins',
+            'New York Yankees',
+            'Oakland Athletics',
+            'Seattle Mariners',
+            'Tampa Bay Rays',
+            'Texas Rangers',
+            'Toronto Blue Jays',
         ];
 
         return [
-            'name' => fake()->randomElement($names),
+            'name' => fake()->unique()->randomElement($names),
         ];
     }
 }
