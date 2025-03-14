@@ -1,3 +1,5 @@
 <div>
-    {{-- A good traveler has no fixed plans and is not intent upon arriving. --}}
+    @foreach ($teams as $team)
+        <div>{{ $team->name }}</div>
+    @endforeach
 </div>
