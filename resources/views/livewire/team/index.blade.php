@@ -26,7 +26,12 @@
         </div>
         @foreach ($teams as $team)
             <flux:card>
-                <flux:heading size="lg">{{ $team->year }} {{ $team->name }}</flux:heading>
+                <div class="flex items-center justify-between">
+                    <flux:heading>{{ $team->year }} {{ $team->name }}</flux:heading>
+                    <flux:button wire:navigate variant="ghost" size="sm" href="{{ route('teams.show', $team) }}">
+                        View
+                    </flux:button>
+                </div>
             </flux:card>
         @endforeach
     </div>

@@ -4,6 +4,7 @@ use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use App\Livewire\Team\Index as TeamIndex;
+use App\Livewire\Team\Show as TeamShow;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -15,6 +16,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         ->name('dashboard');
 
     Route::get('teams', TeamIndex::class)->name('teams.index');
+    Route::get('teams/{team}', TeamShow::class)->name('teams.show');
 });
 
 Route::middleware(['auth'])->group(function () {
