@@ -4,6 +4,9 @@
         <flux:button wire:navigate size="sm" href="{{ route('teams.index') }}">Back</flux:button>
     </div>
     <div class="mt-6">
+        <livewire:team.chart :team="$team" />
+    </div>
+    <div class="mt-6">
         <flux:table :paginate="$this->stats()">
             <flux:table.columns>
                 <flux:table.column>Date</flux:table.column>
