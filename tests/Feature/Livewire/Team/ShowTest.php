@@ -22,6 +22,7 @@ it('renders successfully for authenticated users', function () {
     $this->actingAs($user)
         ->get(route('teams.show', $team))
         ->assertOk()
+        ->assertSee($team->year . ' ' . $team->name)
         ->assertSeeLivewire(Show::class);
 });
 
