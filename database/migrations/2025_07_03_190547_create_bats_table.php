@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Opponent;
 
 return new class extends Migration
 {
@@ -14,6 +15,7 @@ return new class extends Migration
         Schema::create('bats', function (Blueprint $table) {
             $table->id();
             $table->datetime('datetime');
+            $table->foreignIdFor(Opponent::class)->constrained();
             $table->integer('pa');
             $table->integer('ab');
             $table->integer('h');
@@ -32,7 +34,7 @@ return new class extends Migration
             $table->integer('roe');
             $table->integer('fc');
             $table->integer('sb');
-            $table->integer('sc');
+            $table->integer('cs');
             $table->integer('pik');
             $table->timestamps();
         });
