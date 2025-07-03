@@ -11,4 +11,9 @@ class Opponent extends Model
     {
         return $this->hasMany(Bat::class);
     }
+
+    public function pitches(): HasMany
+    {
+        return $this->hasMany(Pitch::class);
+    }
 }
