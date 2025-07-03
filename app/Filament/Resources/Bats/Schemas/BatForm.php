@@ -21,6 +21,10 @@ class BatForm
                         TextInput::make('name')
                             ->label('Opponent Name')
                             ->required(),
+                        FileUpload::make('logo')
+                            ->avatar()
+                            ->image()
+                            ->circleCropper(),
                     ])
                     ->required(),
                 TextInput::make('pa')

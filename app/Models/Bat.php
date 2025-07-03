@@ -15,4 +15,9 @@ class Bat extends Model
     {
         return $this->belongsTo(Opponent::class);
     }
+
+    public function game(): BelongsTo
+    {
+        return $this->belongsTo(Game::class);
+    }
 }

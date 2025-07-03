@@ -17,7 +17,8 @@ class OpponentForm
                     ->required(),
                 FileUpload::make('logo')
                     ->avatar()
-                    ->image(),
+                    ->image()
+                    ->circleCropper(),
             ]);
     }
 }

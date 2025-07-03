@@ -11,4 +11,14 @@ class Game extends Model
     {
         return $this->hasOne(Opponent::class);
     }
+
+    public function atBat(): HasOne
+    {
+        return $this->hasOne(Bat::class);
+    }
+
+    public function pitching(): HasOne
+    {
+        return $this->hasOne(Pitch::class);
+    }
 }

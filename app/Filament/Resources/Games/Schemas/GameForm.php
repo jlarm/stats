@@ -25,7 +25,8 @@ class GameForm
                             ->required(),
                         FileUpload::make('logo')
                             ->avatar()
-                            ->image(),
+                            ->image()
+                            ->circleCropper(),
                     ])
                     ->required(),
                 TextInput::make('opponent_score')
