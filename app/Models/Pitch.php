@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Pitch extends Model
 {
+    protected $casts = [
+        'date' => 'date',
+    ];
+
     public function opponent(): BelongsTo
     {
         return $this->belongsTo(Opponent::class);

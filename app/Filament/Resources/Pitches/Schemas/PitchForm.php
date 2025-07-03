@@ -2,7 +2,7 @@
 
 namespace App\Filament\Resources\Pitches\Schemas;
 
-use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
@@ -13,8 +13,7 @@ class PitchForm
     {
         return $schema
             ->components([
-                DateTimePicker::make('datetime')
-                    ->seconds(false)
+                DatePicker::make('date')
                     ->required(),
                 Select::make('opponent_id')
                     ->label('Opponent')

@@ -14,7 +14,7 @@ return new class extends Migration
     {
         Schema::create('pitches', function (Blueprint $table) {
             $table->id();
-            $table->datetime('datetime');
+            $table->date('date');
             $table->foreignIdFor(Opponent::class);
             $table->decimal('ip');
             $table->integer('gs');

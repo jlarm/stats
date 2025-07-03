@@ -14,7 +14,7 @@ return new class extends Migration
     {
         Schema::create('bats', function (Blueprint $table) {
             $table->id();
-            $table->datetime('datetime');
+            $table->date('date');
             $table->foreignIdFor(Opponent::class)->constrained();
             $table->integer('pa');
             $table->integer('ab');
