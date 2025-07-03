@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Bats\Schemas;
 
 use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 
@@ -13,6 +14,14 @@ class BatForm
         return $schema
             ->components([
                 DateTimePicker::make('datetime')
+                    ->required(),
+                Select::make('opponent_id')
+                    ->relationship('opponent', 'name')
+                    ->createOptionForm([
+                        TextInput::make('name')
+                            ->label('Opponent Name')
+                            ->required(),
+                    ])
                     ->required(),
                 TextInput::make('pa')
                     ->label('PA')

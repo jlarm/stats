@@ -15,7 +15,7 @@ class BatsTable
         return $table
             ->columns([
                 TextColumn::make('datetime')
-                    ->dateTime()
+                    ->date()
                     ->sortable(),
                 TextColumn::make('pa')
                     ->numeric()
