@@ -7,6 +7,13 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Pitch extends Model
 {
+    protected $fillable = [
+        'date', 'opponent_id', 'game_id',
+        'ip', 'gs', 'bf', 'tp', 'tb', 'ts', 'h', 'r', 'er',
+        'bb', 'so', 'kl', 'hbp', 'lob', 'bk', 'pik', 'cs',
+        'sb', 'wp', 'w', 'l', 'sv', 'bs', 'baa'
+    ];
+    
     protected $casts = [
         'date' => 'date',
     ];

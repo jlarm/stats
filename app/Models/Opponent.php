@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Opponent extends Model
 {
-    public function game(): BelongsTo
+    public function games(): HasMany
     {
-        return $this->belongsTo(Game::class);
+        return $this->hasMany(Game::class);
     }
 
     public function bats(): HasMany

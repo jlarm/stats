@@ -7,6 +7,13 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Bat extends Model
 {
+    protected $fillable = [
+        'date', 'opponent_id', 'game_id',
+        'pa', 'ab', 'h', 'singles', 'doubles', 'triples',
+        'hr', 'rbi', 'r', 'bb', 'so', 'kl', 'hbp',
+        'sac', 'sf', 'roe', 'fc', 'sb', 'cs', 'pik'
+    ];
+
     protected $casts = [
         'date' => 'date',
     ];

@@ -17,8 +17,7 @@ class GamesTable
                 TextColumn::make('date')
                     ->date()
                     ->sortable(),
-                TextColumn::make('opponent_id')
-                    ->numeric()
+                TextColumn::make('opponent.name')
                     ->sortable(),
                 TextColumn::make('opponent_score')
                     ->numeric()
@@ -26,14 +25,6 @@ class GamesTable
                 TextColumn::make('our_score')
                     ->numeric()
                     ->sortable(),
-                TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
